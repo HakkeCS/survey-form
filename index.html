@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
 </head>
 <body>
-    
+    <section class="title-header">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please fill out the following form</p>
+    </section>
+
+    <section class="main-form">
+        <form action="" id="survey-form">
+            <fieldset>
+                <label for="name-label">Full Name <input type="text" required id="name-label" placeholder="Bill Billman"></label>
+                <label for="email-label">Email Address <input type="email" required id="email-label" placeholder="Bill@Billman.io"></label>
+                <label for="number-label">Age <input type="number" required max="120" min="13" id="number-label" placeholder="34"></label>
+            </fieldset>
+            <fieldset>
+                <label for="dropdown">Do you enjoy the finer things in life? </label>
+                    <select name="fine-things" id="dropdown">
+                        <option value="">choose one</option>
+                        <option value="best">Only the best for me</option>
+                        <option value="kinda">Sometimes, but not all the time</option>
+                        <option value="no">Never. Absolutley not</option>
+                    </select>
+                <p>How likely are you to recommend Windows 10 to others?</p>
+                <label for="very-likely"><input id='very-likely' type="radio" name="windows-10">Very Likely</label>
+                <label for="not-likely"><input id="not-likely" type="radio" name="windows-10">Not Likely</label>
+                <label for="terms-and-conditions" name="terms-and-conditions">
+                    <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" value="yes"/> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+                    <input type="checkbox" name="terms-and-conditions" value="no">I do not accept
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="add-comments">Please provide any additonal comments:
+                    <textarea id="add-comments" name="add-comments" rows="3" cols="30" placeholder="This was the best survey form ever!"></textarea>
+                </label>
+            </fieldset>
+            <input type="submit" id="submit" class="sub-button">
+        </form>
+    </section>
 </body>
 </html>
